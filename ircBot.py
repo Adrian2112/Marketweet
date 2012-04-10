@@ -12,6 +12,10 @@ import twitter
 import account
 import multiprocessing
 import string, time, random, datetime, codecs
+import sys
+
+''' Redirect standar output to file'''
+sys.stdout = open("bot_log.log", 'a', 0)
 
 '''Initialization of both twitter global access and bot's account.'''
 twitter = twitter.Api()
