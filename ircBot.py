@@ -205,18 +205,21 @@ def tweet_from_file():
     else:
       index = random.randint(0, len(tweets)-1)
       bot.PostUpdates(tweets[index])
+      current_time = datetime.datetime.now()    
+     
       print '--' * 15
       print 'TWEETING Process:\t Finished'
       print 'Tweet was:\t\t ' + tweets[index].split('\n')[0]
+      print 'At :' + str(current_time)
       print '--' * 15
       del tweets[index]
 
     f = open('tweets.txt', 'w')     # Reopen file to write remaining tweets
     f.writelines(tweets)
     f.close()
-    
-    sleep_process = SLEEP_NEW_TWEET * random.randint(6, 18)
-    print 'Hours for next tweet: ' + str(datetime.timedelta(seconds=(sleep_process))).split(':')[0]
+
+    sleep_process = (SLEEP_NEW_TWEET/60) * random.randint(5, 90)
+    print 'Next tweet at: ' + str(current_time + datetime.timedelta(seconds=(sleep_process)))
     time.sleep(sleep_process)     # Sleeps certain time until the next tweet
 
 
