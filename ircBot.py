@@ -225,7 +225,7 @@ def tweet_from_file():
 
 '''Bot flow'''
 # Should use threads for syncronizathion and independent tasks
-multiprocessing.Process(target=follow_people_by_topic).start()
+#multiprocessing.Process(target=follow_people_by_topic).start()
 #multiprocessing.Process(target=follow_people_not_followed).start()
-#multiprocessing.Process(target=tweet_from_file).start()
+multiprocessing.Process(target=tweet_from_file).start()
 
