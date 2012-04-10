@@ -105,6 +105,8 @@ Marketweet uses the multiprocessing module, which allow you have multiple proces
 * __tweets.txt__: A list of tweets, where each has at most 140 characters and is tweetead after a certain time, separated by a line break. 
 * __topics.txt__: The list of keywords the bot should rely to follow people. Topics can be as long as you want, separated by a line break. 
 * __users.txt__: The list of users the bot can ignore and keep following even they haven't returned the follow, separated by a line break.  
+* __followed.txt__: The list of users that the bot already followed.  
+* __replies.txt__: The list replies that the bot will tweet when a new user is followed.  
 
 As an example, check this out:
 
